@@ -13,11 +13,10 @@ from groq import RateLimitError
 
 st.set_page_config(
     page_title="Gen AI Quality Issue Analyzer",
-    page_icon="🛠",
     layout="wide"
 )
 
-st.title("🛠 Gen-AI Quality Issue Analyzer")
+st.title(" Generative AI–Based Manufacturing Quality Issue Analyzer")
 st.write("Upload manufacturing defect data or enter a defect manually to generate engineering improvement recommendations.")
 
 
