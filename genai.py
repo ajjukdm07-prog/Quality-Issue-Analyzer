@@ -24,9 +24,16 @@ st.write("Upload manufacturing defect data or enter a defect manually to generat
 # API INITIALIZATION
 # ================================
 
-GROQ_API_KEY = "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"
+import streamlit as st
+from groq import Groq
 
-client = Groq(api_key=GROQ_API_KEY)
+api_key = st.secrets.get("GROQ_API_KEY")
+
+if not api_key:
+    st.error("API key not found. Please set it in Streamlit secrets.")
+    st.stop()
+
+client = Groq(api_key=api_key)
 
 
 # ================================
